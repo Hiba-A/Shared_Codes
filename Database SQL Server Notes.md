@@ -203,7 +203,7 @@ An index is a smaller lookup table that can be used to jump to the specified sea
 
 • Which helps with effective ordering of the access to the records
 
-T**ypes of Keys in Database Management System:**There are mainly seven different types of Keys in DBMS and each key has it’s different functionality:
+**Types of Keys in Database Management System:** There are mainly seven different types of Keys in DBMS and each key has it’s different functionality:
 
 - **Super Key -**  A super key is a group of single or multiple keys which identifies rows in a table.
 - **Primary Key -**  is a column or group of columns in a table that uniquely identify every row in that table.
@@ -250,7 +250,7 @@ CREATE TABLE Persons (
 
  • There are three types of relationships you will encounter at this stage in the design: 
 
-    **one-to-many,** **one-to-one**, **and many-to-many**. 
+   **one-to-many,** **one-to-one**, **and many-to-many**. 
 
 • To determine which relationships your tables should use: 
 
