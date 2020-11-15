@@ -84,6 +84,87 @@ ORDER BY COUNT(CustomerID) DESC;
 
 ![Multiple Conditional Operators](https://raw.githubusercontent.com/Hiba-A/Shared_Codes/master/Database/Screenshot_(166).png)
 
+![Arithmetic Operator](https://raw.githubusercontent.com/Hiba-A/Shared_Codes/master/Database/Screenshot%20(203).png)
+
+![Parentheses](https://raw.githubusercontent.com/Hiba-A/Shared_Codes/master/Database/Screenshot%20(207).png)
+
+**The BETWEEN...AND Operator:** 
+
+```sql
+/*The following SQL statement selects all products with a price BETWEEN 10 and 20:*/
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+```
+
+**The IN Operator:** 
+
+- The IN operator allows you to specify multiple values in a WHERE clause.
+- The IN operator is a shorthand for multiple OR conditions.
+
+```sql
+/*The following SQL statement selects all customers that are located in "Germany", 
+"France" or "UK":*/
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+Fore more info on (Operators) follow this link: [https://www.w3schools.com/sql/sql_operators.asp](https://www.w3schools.com/sql/sql_operators.asp)
+```
+
+**Aliasing:** 
+
+- SQL aliases are used to give a table, or a column in a table, a temporary name.
+- Aliases are often used to make column names more readable.
+- An alias only exists for the duration of the query.
+
+```sql
+/*Alias Column Syntax*/
+SELECT column_name AS alias_name
+FROM table_name;
+/*Alias Table Syntax*/
+SELECT column_name(s)
+FROM table_name AS alias_name;
+```
+
+**What is a NULL Value? :** 
+
+- A field with a NULL value is a field with no value.
+- If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field. Then, the field will be saved with a NULL value.
+- It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
+- We will have to use the IS NULL and IS NOT NULL operators instead.
+
+```sql
+/*The following SQL lists all customers with a NULL value in the "Address" field:*/
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+/*The following SQL lists all customers with a value in the "Address" field:*/
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+```
+
+**SQL Wildcard Characters:** Wildcard characters are used with the SQL LIKE operator. The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+
+```sql
+/*The following SQL statement selects all customers with a City starting with "ber":*/
+SELECT * FROM Customers
+WHERE City LIKE 'ber%';
+/*The following SQL statement selects all customers with a City containing the pattern "es":*/
+SELECT * FROM Customers
+WHERE City LIKE '%es%';
+```
+
+**Regular Expressions:** Regex, or Regular Expressions, is a sequence of characters, used to search and locate specific sequences of characters that match a pattern.
+
+```sql
+/*Match the specified String*/
+SELECT * FROM `learnerdetails` WHERE `course_name` REGEXP 'SQL';
+/*Match beginning of string(^23)*/
+SELECT * FROM `learnerdetails` WHERE `course_Id` REGEXP '^23';
+/*Match zero or one instance of the strings preceding it(Ja?)*/
+SELECT * FROM learnerdetails WHERE course_name REGEXP 'Ja?';
+```
+
 **Types of Functions:**
 
 Configuration  —  Metadata — Cursor —  Security —  System Statistical  —   Date & Time **—** 
