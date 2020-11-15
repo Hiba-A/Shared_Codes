@@ -250,7 +250,7 @@ CREATE TABLE Persons (
 
  • There are three types of relationships you will encounter at this stage in the design: 
 
-      - **one-to-many,** **one-to-one**, **and many-to-many**. 
+    **one-to-many,** **one-to-one**, **and many-to-many**. 
 
 • To determine which relationships your tables should use: 
 
